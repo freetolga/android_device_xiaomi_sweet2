@@ -21,6 +21,9 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/configs/hidl/manifest.xml
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/sweet2.config
 
+# KSU Next
+TARGET_KERNEL_CONFIG += vendor/ksu.config
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
