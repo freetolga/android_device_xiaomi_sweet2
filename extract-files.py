@@ -22,6 +22,7 @@ namespace_imports = [
     'hardware/xiaomi',
     'vendor/qcom/opensource/display',
     'vendor/xiaomi/sm6150-common',
+    'device/xiaomi/sweet2',
 ]
 
 lib_fixups: lib_fixups_user_type = {
@@ -57,6 +58,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libmegface.so', 'libfacedet.so')
         .replace_needed('libMegviiFacepp-0.5.2.so', 'libFaceDetectpp-0.5.2.so')
         .replace_needed('megviifacepp_0_5_2_model', 'facedetectpp_0_5_2_model'),
+    ('vendor/lib/hw/audio.primary.sm6150.so', 'vendor/lib/libaudioroute_ext.so') : blob_fixup()
+         .replace_needed('libaudioroute.so', 'libaudioroute-v34.so'), 
 }  # fmt: skip
 
 module = ExtractUtilsModule(

@@ -1,0 +1,17 @@
+cc_prebuilt_library_shared {
+    name: "libaudioroute-v34",
+    vendor: true,
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: ["libaudioroute-v34-arm.so"],
+        },
+        android_arm64: {
+            srcs: ["libaudioroute-v34-arm64.so"],
+        },
+    },
+    compile_multilib: "both",
+    check_elf_files: false,
+}
