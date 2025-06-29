@@ -88,3 +88,5 @@ PRODUCT_PACKAGES += \
 $(call inherit-product, vendor/xiaomi/sweet2/sweet2-vendor.mk)
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false 
+# gapps
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
