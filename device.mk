@@ -29,7 +29,6 @@ PRODUCT_PACKAGES += \
 # Init scripts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.sweet2.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.sweet2.rc
-
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -82,3 +81,6 @@ PRODUCT_PACKAGES += \
 
 # Call the proprietary setup
 $(call inherit-product, vendor/xiaomi/sweet2/sweet2-vendor.mk)
+
+# gapps
+$(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
